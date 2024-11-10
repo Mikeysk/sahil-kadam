@@ -1,0 +1,250 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+}
+
+/* Navigation Styles */
+nav {
+    width: 100%;
+    height: 10vh;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #077b13;
+    text-shadow: 0 0 10px #077b13;
+}
+
+.hamburg,
+.cancel {
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: white;
+    display: none;
+    font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
+}
+
+/* Link Styles */
+.nav-container .links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-container .links a {
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 550;
+    transition: 0.3s;
+}
+
+.nav-container .links a:hover {
+    color: #077b13;
+}
+
+/* Dropdown Menu Styles */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(4px);
+    text-align: center;
+}
+
+.dropdown .links a {
+    display: block;
+    padding: 15px 0;
+    color: white;
+}
+
+.dropdown .links a:hover {
+    background-color: #077b13;
+}
+
+/* Main Section Styles */
+section {
+    width: 100%;
+    padding: 20px;
+}
+
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.main-container .image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 20px #077b13;
+}
+
+.main-container .image img {
+    width: 100%;
+    height: auto;
+}
+
+.main-container .content {
+    color: white;
+    max-width: 600px;
+    text-align: center;
+}
+
+.content h1 {
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
+}
+
+.content p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    margin: 20px 0;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links i {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: transparent;
+    border: 2px solid #077b13;
+    border-radius: 50%;
+    color: #077b13;
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+
+.social-links i:hover {
+    background-color: #077b13;
+    color: black;
+}
+
+/* Button Styles */
+.content button {
+    padding: 10px 20px;
+    background-color: #077b13;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.content button:hover {
+    background-color: white;
+    color: #077b13;
+    box-shadow: 0 0 10px #077b13;
+}
+
+/* Responsive Design */
+
+/* Tablets and Small Laptops */
+@media (max-width: 992px) {
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-container .links {
+        display: none;
+    }
+
+    .hamburg {
+        display: block;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 600px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .main-container .image {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .content h1 {
+        font-size: 1.8rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+
+    .social-links i {
+        width: 35px;
+        height: 35px;
+        font-size: 1.2rem;
+    }
+
+    .content button {
+        width: 100%;
+    }
+}
+
+/* Extra Small Devices (e.g., very small phones) */
+@media (max-width: 400px) {
+    .main-container .image {
+        max-width: 250px;
+    }
+
+    .content h1 {
+        font-size: 1.5rem;
+    }
+
+    .content p {
+        font-size: 0.9rem;
+    }
+
+    .social-links i {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+}

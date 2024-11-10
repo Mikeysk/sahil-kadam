@@ -12,8 +12,8 @@ function cancel(){
 
 const texts = [
     "DEVELOPER",
-    "DESIGNER",
-    "YOUTUBER"
+    "SMART",
+    "AI DS ENGG"
 ]
 
 let speed  =100;
